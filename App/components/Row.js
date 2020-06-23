@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text,  StyleSheet, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 const styles = StyleSheet.create({
@@ -10,12 +10,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#fff"
   },
-  image: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    marginRight: 10
-  },
+
   content: {
     alignItems: "flex-start",
     justifyContent: "center"
