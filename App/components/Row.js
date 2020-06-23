@@ -21,15 +21,11 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   title: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "600",
     color: "#3a3a3a"
   },
-  subtitle: {
-    color: "#666",
-    fontSize: 16,
-    marginTop: 2
-  },
+  
   separator: {
     backgroundColor: "#ececec",
     height: 1
@@ -37,17 +33,17 @@ const styles = StyleSheet.create({
   right: {
     alignItems: "flex-end",
     flex: 1
-  }
+  },
+  
+
 });
 
-export const Row = ({ image, title, subtitle, onPress }) => (
+export const Row = ({  title, onPress }) => (
   <TouchableOpacity onPress={onPress} style={styles.container}>
-    <View>
-      <Image source={image} style={styles.image} />
-    </View>
+  
     <View style={styles.content}>
       <Text style={styles.title}>{title}</Text>
-      <Text style={styles.subtitle}>{subtitle}</Text>
+   
     </View>
     <View style={styles.right}>
       <Ionicons name="ios-arrow-forward" color="#666" size={20} />
