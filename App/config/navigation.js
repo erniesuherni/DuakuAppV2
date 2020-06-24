@@ -5,7 +5,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import DuasList from '../screens/DuasList';
 import DuasDetails from '../screens/DuasDetails';
-import Prayer from '../screens/Prayer';
+import AddDua from '../screens/AddDua';
+
 
 const DuasStack = createStackNavigator();
 const DuasStackScreen = () => (
@@ -20,18 +21,19 @@ const DuasStackScreen = () => (
   </DuasStack.Navigator>
 );
 
-const PrayerStack = createStackNavigator();
-const PrayerStackScreen = () => (
-<PrayerStack.Navigator>
-  <PrayerStackScreen.Screen name = "Prayer" component = {Prayer} />
-</PrayerStack.Navigator>
+const AddDuaStack = createStackNavigator();
+const AddDuaStackScreen = () => (
+<AddDuaStack.Navigator>
+  <AddDuaStack.Screen name = "AddDua" component = {AddDua} />
+ 
+</AddDuaStack.Navigator>
 );
 
 const AppTabs = createBottomTabNavigator();
 const AppTabsScreen = () => (
 <AppTabs.Navigator>
   <AppTabs.Screen name = "Dua" component = {DuasStackScreen} />
-  <AppTabs.Screen name = "Prayer" component = {PrayerStackScreen} />
+  <AppTabs.Screen name = "AddDua" component = {AddDuaStackScreen} options = {{headerTitle: 'Add Dua'}} />
 </AppTabs.Navigator>
 );
 
