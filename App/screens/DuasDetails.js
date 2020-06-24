@@ -1,6 +1,21 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
+
+export default ({ route }) => {
+  const duaDetails = route.params.dua;
+
+  return <View>
+      <Text>{duaDetails.title}</Text>
+      <Text>{duaDetails.desc}</Text>
+      <Text>{duaDetails.pronuntiation}</Text>
+      <Text>{duaDetails.translation}</Text>
+      <Text>{duaDetails.source}</Text>
+    </View>;
+
+};
+
+
 const styles = StyleSheet.create({
   container: {
       flex: 1,
@@ -27,20 +42,20 @@ const styles = StyleSheet.create({
       flex: 1,
       color: "#000000",
       fontWeight: 'bold',
-      marginLeft: 20
+      marginLeft: 20,
   },
   text : {
     fontSize: 15,
     flex: 1,
     color: "#000000",
-    marginLeft: 20
+    marginLeft: 20,
   },
 
   desc: {
       fontSize : 25,
       flex: 1,
       color : "#000000",
-      marginLeft: 20
+      marginLeft: 20,
   },
   subTitle: {
       fontSize: 12,
@@ -49,16 +64,3 @@ const styles = StyleSheet.create({
   },
  
 });
-
-export default ({ route }) => {
-  const duaDetails = route.params.dua;
-
-  return <View>
-      <Text>{duaDetails.title}</Text>
-      <Text>{duaDetails.desc}</Text>
-      <Text>{duaDetails.pronuntiation}</Text>
-      <Text>{duaDetails.translation}</Text>
-      <Text>{duaDetails.source}</Text>
-    </View>;
-
-};
